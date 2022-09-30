@@ -5,7 +5,7 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
 
-Compile / compile / wartremoverErrors ++= Warts.all
+Compile / compile / wartremoverErrors ++= Warts.allBut(Wart.ScalaApp)
 
 lazy val root = (project in file("."))
   .settings(
