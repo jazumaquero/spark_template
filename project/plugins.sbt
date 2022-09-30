@@ -10,3 +10,7 @@ addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.1")
 
 // Dependency check plugins
 addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "4.1.0")
+
+// Packaging plugins
+addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.11")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "1.2.0")
