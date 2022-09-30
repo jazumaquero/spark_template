@@ -5,6 +5,8 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
 
+Compile / compile / wartremoverErrors ++= Warts.all
+
 lazy val root = (project in file("."))
   .settings(
     name := "Scala Seed Project",
