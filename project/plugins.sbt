@@ -14,3 +14,7 @@ addSbtPlugin("net.vonbuchholtz" % "sbt-dependency-check" % "4.1.0")
 // Packaging plugins
 addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.11")
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "1.2.0")
+
+// Project documentation plugins
+addSbtPlugin("com.lightbend.paradox" % "sbt-paradox" % "0.10.2")
+addSbtPlugin("io.github.jonas" % "sbt-paradox-material-theme" % "0.6.0")

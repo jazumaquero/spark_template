@@ -17,7 +17,16 @@ ThisBuild / assemblyMergeStrategy := {
 
 Compile / compile / wartremoverErrors ++= Warts.allBut(Wart.ScalaApp)
 
+Compile / paradoxMaterialTheme := {
+  ParadoxMaterialTheme()
+    .withColor("red", "orange")
+    .withLogoIcon("cloud")
+    .withCopyright("Copyleft © Jonas Fonseca")
+}
+
 lazy val root = (project in file("."))
+  .enablePlugins(ParadoxPlugin)
+  .enablePlugins(ParadoxMaterialThemePlugin)
   .settings(
     name := "Template project",
     assembly / mainClass := Some("com.zcia.Hello"),
