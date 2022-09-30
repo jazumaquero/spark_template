@@ -10,6 +10,7 @@ Compile / compile / wartremoverErrors ++= Warts.allBut(Wart.ScalaApp)
 lazy val root = (project in file("."))
   .settings(
     name := "Scala Seed Project",
+    coverageEnabled := true,
     libraryDependencies += scalaTest % Test
   )
 
