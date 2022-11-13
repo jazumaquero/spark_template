@@ -28,11 +28,15 @@ lazy val root = (project in file("."))
   .enablePlugins(ParadoxPlugin)
   .enablePlugins(ParadoxMaterialThemePlugin)
   .settings(
-    name := "Template project",
-    assembly / mainClass := Some("com.zcia.Hello"),
+    name                       := "Template project",
+    assembly / mainClass       := Some("com.zcia.Hello"),
     assembly / assemblyJarName := "hello.jar",
-    coverageEnabled := true,
-    libraryDependencies += scalaTest % Test
+    coverageEnabled            := true,
+    libraryDependencies ++= Seq(
+      scalaTest % Test,
+      scalaLogging,
+      logbackClassic
+    )
   )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

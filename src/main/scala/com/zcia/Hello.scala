@@ -1,7 +1,9 @@
 package com.zcia
 
-object Hello extends Greeting with App {
-  println(greeting)
+import com.typesafe.scalalogging.LazyLogging
+
+object Hello extends Greeting with App with LazyLogging {
+  logger.info(greeting)
 }
 
 trait Greeting {
