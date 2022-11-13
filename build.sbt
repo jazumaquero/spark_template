@@ -35,7 +35,8 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       scalaTest % Test,
       scalaLogging,
-      logbackClassic
+      logbackClassic,
+      spark % "provided"
     )
   )
 
