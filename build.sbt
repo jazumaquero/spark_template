@@ -5,6 +5,8 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.zcia"
 ThisBuild / organizationName := "example"
 
+ThisBuild / libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % VersionScheme.Always
+
 ThisBuild / assemblyMergeStrategy := {
   case PathList("javax", "servlet", xs @ _*)         => MergeStrategy.first
   case PathList(ps @ _*) if ps.last endsWith ".html" => MergeStrategy.first
@@ -36,7 +38,7 @@ lazy val root = (project in file("."))
       scalaTest % Test,
       scalaLogging,
       logbackClassic,
-      spark % "provided"
+      spark
     )
   )
 
