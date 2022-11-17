@@ -38,7 +38,8 @@ lazy val root = (project in file("."))
       scalaTest % Test,
       scalaLogging,
       logbackClassic,
-      spark
+      spark,
+      sparkSQL
     )
   )
 
