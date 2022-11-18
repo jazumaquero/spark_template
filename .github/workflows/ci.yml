@@ -19,6 +19,8 @@ jobs:
       run: sbt coverage test
     - name: Coverage Report
       run: sbt coverageReport
+    - name: Dependency check
+      run: sbt dependencyCheck
   lint:
     runs-on: ubuntu-latest
     steps:
