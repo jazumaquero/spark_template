@@ -2,7 +2,6 @@ package com.zcia.travels
 
 import java.sql.Date
 
-
 final case class Flight(
     travelCode: Long,
     userCode: Long,
