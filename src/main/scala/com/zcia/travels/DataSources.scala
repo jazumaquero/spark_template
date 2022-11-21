@@ -9,7 +9,7 @@ import scala.reflect.runtime.universe.TypeTag
 
 trait DataSources {
   final val DATE_FORMAT: String = "MM/dd/yyyy"
-  
+
   implicit val fligthsPath: String
   implicit val hotelsPath: String
   implicit val usersPath: String
