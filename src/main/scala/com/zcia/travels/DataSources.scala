@@ -7,7 +7,8 @@ import org.apache.spark.sql.types.StructType
 import scala.reflect.api.TypeTags
 import scala.reflect.runtime.universe.TypeTag
 
-class DataSources(val spark: SparkSession) {
+trait DataSources {
+  implicit val spark: SparkSession
   import spark.implicits._
 
   protected val dateFormat: String = "MM/dd/yyyy"
