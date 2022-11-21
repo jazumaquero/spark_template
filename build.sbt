@@ -17,6 +17,8 @@ ThisBuild / assemblyMergeStrategy := {
     oldStrategy(x)
 }
 
+ThisBuild / parallelExecution := false
+
 Compile / compile / wartremoverErrors ++= Warts.allBut(Wart.ScalaApp)
 
 Compile / paradoxMaterialTheme := {
